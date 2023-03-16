@@ -1,0 +1,27 @@
+﻿<Window x:Class="AgeCalculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AgeCalculator"
+        mc:Ignorable="d"
+        WindowStyle="ToolWindow"
+        Title="Age Calculator" Height="170" Width="500">
+    <Grid>
+       
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"></ColumnDefinition>
+            <ColumnDefinition Width="150"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="80"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <DatePicker x:Name="DatePicker" Margin="0,10,0,0" Grid.Column="0" Height="30" Width="250"/>
+        <Button x:Name="CalculateAgeButton" Margin="0,10,0,0" Grid.Column="1" Content="Calculate Age" Height="30" Width="100" Click="CalculateAgeButton_Click" />
+
+        <TextBlock x:Name="TextBlock" Margin="20" Grid.Row="1" Grid.ColumnSpan="2"></TextBlock>
+    </Grid>
+</Window>
